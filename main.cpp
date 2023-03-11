@@ -3,9 +3,11 @@
 #include<stdint.h>
 #include<stdlib.h>
 #include<netinet/in.h>
+
 uint32_t n1, n2, res;
 uint32_t *buffer;
 FILE *fp1, *fp2;
+
 int main(int argc, char *argv[])
 {
   if(argc != 3) {
