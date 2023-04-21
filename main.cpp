@@ -12,17 +12,17 @@ int main(int argc, char *argv[])
 {
   if(argc != 3) {
     printf("Input Error!\n");
-    return 0;
+    return -1;
   }
 
   if((fp1 = fopen(argv[1], "rb")) == NULL || (fp2 = fopen(argv[2], "rb")) == NULL) {
     printf("Read Error!\n");
-    return 0;
+    return -1;
   }
 
   if((buffer = (uint32_t*)malloc(sizeof(uint32_t))) == NULL) {
     printf("Memory Error!\n");
-    return 0;
+    return -1;
   }
 
   fread(buffer, 4, 1, fp1);
